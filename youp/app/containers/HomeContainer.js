@@ -8,14 +8,14 @@ export default class HomeContainer extends React.Component {
         projetos: [
             {
                 id: '1',
-                uri: 'http://shhkids.org/wp-content/uploads/2013/03/Tiffany2.jpg',
+                uri: 'https://i.imgur.com/lUAsGMU.jpg',
                 name: 'Mãos à Dobra',
                 description: 'Ajude a transformar a escola Rui Barbosa com uma reforma no campinho',
                 date: '14/09/2018'
             },
             {
                 id: '2',
-                uri: 'http://shhkids.org/wp-content/uploads/2013/03/Tiffany2.jpg',
+                uri: 'https://i.imgur.com/lUAsGMU.jpg',
                 name: 'Mãos à Dobra 2',
                 description: 'Ajude a transformar a escola Rui Barbosa com uma reforma no campinho',
                 date: '14/09/2018'
@@ -55,6 +55,9 @@ export default class HomeContainer extends React.Component {
 
                 <FlatList
                     data={this.state.projetos}
+                    style={{
+                        paddingTop: 10
+                    }}
                     renderItem={({ item }) => <ProjetoItem {...item} />}
                     keyExtractor={item => item.id}
                 />
