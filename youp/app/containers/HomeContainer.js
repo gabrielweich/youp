@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, FlatList, View } from 'react-native'
+import { Text, FlatList, View, Image } from 'react-native'
 import ProjetoItem from '../components/ProjetoItem'
 import CategoriaItem from '../components/CategoriaItem'
 
@@ -32,9 +32,19 @@ export default class HomeContainer extends React.Component {
 
         ]
     }
+    //7504AE
     render() {
         return (
-            <View>
+            <View style={{ backgroundColor: '#fff', flex: 1 }}>
+                <Image style={{ alignSelf: 'center', width: 100, height: 80 }} resizeMode="contain" source={require('../images/YoUP.gif')} />
+                <View
+                    style={{
+                        height: 2,
+                        opacity: 0.3,
+                        width: "100%",
+                        backgroundColor: "#CED0CE",
+                    }}
+                />
                 <FlatList
                     data={this.state.categorias}
                     renderItem={({ item }) => <CategoriaItem {...item} />}

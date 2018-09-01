@@ -43,16 +43,17 @@ const TabNavigation = createBottomTabNavigator({
     tabBarOptions: {
         activeTintColor: colors.blue,
         inactiveTintColor: colors.grey,
+        style: {
+            backgroundColor: '#fff',
+        },
     },
 });
 
 TabNavigation.navigationOptions = ({ navigation }) => {
     const { routes, index } = navigation.state;
-    const navigationOptions = {};
+    const navigationOptions = {header: null};
 
-    if (routes[index].routeName === 'Home') {
-        navigationOptions.title = 'YoUp';
-    }
+    
     return navigationOptions;
 };
 
