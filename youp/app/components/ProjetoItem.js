@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, Image } from 'react-native'
 
 const ProjetoItem = ({ uri, name, description, date }) => {
-    console.warn(uri)
+
     return (
         <View>
             <Image
@@ -13,7 +13,7 @@ const ProjetoItem = ({ uri, name, description, date }) => {
                     borderWidth: 1,
                     borderRadius: 5
                 }}
-                source={require('../images/criancas.jpg')}
+                source={{uri}}
                 resizeMode="cover"
             />
         </View>
