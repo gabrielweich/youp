@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, ImageBackground, TouchableOpacity, StatusBar } from 'react-native'
+import { View, Text, ImageBackground, TouchableOpacity, StatusBar, ScrollView } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient';
 import Button from '../components/Button'
 
@@ -39,17 +39,22 @@ export default class DetalheContainer extends React.Component {
                     >
                     </LinearGradient>
                 </ImageBackground>
-                <View style={{ padding: 20, flex: 1 }}>
-                    <Text style={{ fontFamily: 'Lato-Bold' }}>{category.toUpperCase()}</Text>
-                    <Text style={{ fontSize: 30, color: "#7504AE", fontFamily: 'Baloo-Regular' }}>{name}</Text>
+                <ScrollView>
+                    <View style={{ padding: 20, flex: 1 }}>
+                        <Text style={{ fontFamily: 'Lato-Bold' }}>{category.toUpperCase()}</Text>
+                        <Text style={{ fontSize: 30, color: "#7504AE", fontFamily: 'Baloo-Regular' }}>{name}</Text>
 
-                    <View style={{ marginTop: 30 }}>
-                        <Text style={{fontSize: 20, color: '#000', fontFamily: 'Lato-Light'}}>{description}</Text>
+                        <View style={{ marginTop: 20 }}>
+                            <Text style={{ fontSize: 20, color: '#000', fontFamily: 'Lato-Light' }}>{description}</Text>
+                        </View>
+                        <View style={{ marginVertical: 10 }}>
+                            <Text style={{ fontSize: 17, color: '#000', fontFamily: 'Lato-Light', textAlign: 'right' }}>{date}</Text>
+                        </View>
+                        <View style={{ flex: 1, justifyContent: 'flex-end', alignItems: 'center' }}>
+                            <Button onPress={() => this.props.navigation.navigate('CadastroScreen')}>Quero participar!</Button>
+                        </View>
                     </View>
-                    <View style={{ flex: 1, justifyContent: 'flex-end', alignItems: 'center' }}>
-                        <Button onPress={() => this.props.navigation.navigate('CadastroScreen')}>Quero participar!</Button>
-                    </View>
-                </View>
+                </ScrollView>
 
 
             </View>
