@@ -7,14 +7,14 @@ export default class HomeContainer extends React.Component {
     state = {
         projetos: [
             {
-                id: '1',
+                id_projeto: '1',
                 uri: 'https://i.imgur.com/lUAsGMU.jpg',
                 name: 'Mãos à Dobra',
                 description: 'Ajude a transformar a escola Rui Barbosa com uma reforma no campinho',
                 date: '14/09/2018'
             },
             {
-                id: '2',
+                id_projeto: '2',
                 uri: 'https://i.imgur.com/lUAsGMU.jpg',
                 name: 'Mãos à Dobra 2',
                 description: 'Ajude a transformar a escola Rui Barbosa com uma reforma no campinho',
@@ -27,11 +27,11 @@ export default class HomeContainer extends React.Component {
             { id_categoria: '3', name: 'Educação', icon: 'ios-medical', color: 'blue',  categoria: "educacao" },
             { id_categoria: '4', name: 'saúde', icon: 'ios-medical', color: 'blue',  categoria: "teste"}
         ],
-        selected: 'teste'
+        selected: 'educacao'
     }
 
     selectCategoriaHandler = (idCategoria) => {
-        console.warn(idCategoria)
+        // console.warn(idCategoria)
         this.setState({selected: idCategoria})
     }
     //7504AE
@@ -48,20 +48,17 @@ export default class HomeContainer extends React.Component {
                     }}
                 />
                 <FlatList
-                extraData={this.props}
+                    extraData={this.state}
                     data={this.state.categorias}
-                    renderItem={({ item }) => <CategoriaItem {...item} selected={this.state.selected == item.categoria} select={this.selectCategoriaHandler}/>}
+                    renderItem={({ item }) => <CategoriaItem {...item} selected={this.state.selected === item.categoria} select={this.selectCategoriaHandler}/>}
                     keyExtractor={(item, index) => index}
                     horizontal
                     showsHorizontalScrollIndicator={false}
                 />
-                <View style={{marginTop: 5}}/>
+                <View style={{marginVertical: 5}}/>
                 <FlatList
                     data={this.state.projetos}
-                    style={{
-                        paddingTop: 10
-                    }}
-                    renderItem={({ item }) => <ProjetoItem {...item} />}
+                    renderItem={({ item }) => <ProjetoItem {...item} detalhe={() => this.props.navigation.navigate('DetalheScreen', {projeto: item})}/>}
                     keyExtractor={item => item.id}
                 />
             </View>

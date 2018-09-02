@@ -5,10 +5,14 @@ import {colors} from "./resources/Colors";
 import HomeScreen from "./screens/HomeScreen";
 import RankingScreen from "./screens/RankingScreen"
 import ProfileScreen from './screens/ProfileScren'
+import DetalheScreen from './screens/DetalheScreen';
 
 const NavigationStack = isLogged => createStackNavigator({
     HomeScreen: {
         screen: HomeScreen
+    },
+    DetalheScreen: {
+        screen: DetalheScreen
     },
     TabNavigation: {
         screen: TabNavigation

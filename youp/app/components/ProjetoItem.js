@@ -1,9 +1,9 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import StackedAvatars from './StackedAvatars';
 
-const ProjetoItem = ({ uri, name, description, date }) => {
+const ProjetoItem = ({ uri, name, description, date, detalhe }) => {
 
     return (
         <View
@@ -12,8 +12,10 @@ const ProjetoItem = ({ uri, name, description, date }) => {
         		flex: 1,
 			    alignItems: 'stretch',
 			    justifyContent: 'center',
-			    margin: 10
+				marginTop: 20,
+				marginHorizontal: 20
         	}}>
+			
         	<LinearGradient 
         		start={{x: 0, y: 0}} 
         		end={{x: 1, y: 0}}
@@ -27,6 +29,7 @@ const ProjetoItem = ({ uri, name, description, date }) => {
                     borderBottomRightRadius: 10,
         		}}
         	>
+			<TouchableOpacity onPress={detalhe}>
 	        	<Image
 	                style={{
 	                    height: '100%',
@@ -38,6 +41,7 @@ const ProjetoItem = ({ uri, name, description, date }) => {
 	                source={{uri}}
 	                resizeMode="cover"
 	            />
+			</TouchableOpacity>
 			</LinearGradient>
 			<Text style={{
         		position: 'absolute',
@@ -62,6 +66,7 @@ const ProjetoItem = ({ uri, name, description, date }) => {
 					height: 50
 				}}
 			/>
+			
 			
         </View>
     )
