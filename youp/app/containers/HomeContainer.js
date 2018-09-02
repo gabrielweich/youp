@@ -21,6 +21,22 @@ export default class HomeContainer extends React.Component {
                 name: 'Mãos à Dobra 2',
                 description: 'Ajude a transformar a escola Rui Barbosa com uma reforma no campinho',
                 date: '14/09/2018'
+            },
+            {
+                id_projeto: '3',
+                uri: 'http://www.thejunctionworks.org/site/DefaultSite/filesystem/images/Franklin-Templeton-Volunteers.jpg',
+                name: 'Mãos à Dobra 3',
+                category: 'Animais',
+                description: 'Ajude a transformar a escola Rui Barbosa com uma reforma no campinho',
+                date: '14/09/2018'
+            },
+            {
+                id_projeto: '4',
+                category: 'Saúde',
+                uri: 'https://artsedge.kennedy-center.org/~/media/ArtsEdge/Images/Articles/Families/article-specific/parent-volunteer169.jpg?as=1&dmc=0&w=610',
+                name: 'Mãos à Dobra 4',
+                description: 'Ajude a transformar a escola Rui Barbosa com uma reforma no campinho',
+                date: '14/09/2018'
             }
         ],
         categorias: [
