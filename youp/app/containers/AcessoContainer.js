@@ -4,13 +4,11 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { TextField } from 'react-native-material-textfield';
 import Button from '../components/Button'
 
-export default class CadastroContainer extends React.Component {
+export default class AcessoContainer extends React.Component {
     state = {
-        nome: '',
-        cpf: '',
-        dataNascimento: '',
-        genero: '',
-        telefone: ''
+        email: '',
+        senha: '',
+        confirmaSenha: '',
     }
 
     handleChange = (name, text) => {
@@ -28,7 +26,7 @@ export default class CadastroContainer extends React.Component {
                 />
                 <ScrollView>
                     <View style={{ marginTop: 24, padding: 20 }}>
-                        <Text style={{ fontSize: 36, color: '#7504AE', fontWeight: 'bold' }}>Criar conta :)</Text>
+                        <Text style={{ fontSize: 36, color: '#7504AE', fontWeight: 'bold' }}>Quase lá \0/</Text>
                         <TouchableOpacity style={{
                             marginTop: 25,
                             borderWidth: 2,
@@ -42,33 +40,29 @@ export default class CadastroContainer extends React.Component {
                         }}>
                             <Ionicons name='ios-camera' size={50} color='rgba(0,0,0,0.15)' />
                         </TouchableOpacity>
-                        <Text style={{ fontSize: 18, fontWeight: 'bold', marginTop: 15 }}>Dados Pessoais</Text>
+                        <Text style={{ fontSize: 18, fontWeight: 'bold', marginTop: 25 }}>Dados de acesso</Text>
                         <TextField
-                            label='Nome'
-                            value={this.state.nome}
-                            onChangeText={text => this.handleChange('nome', text)}
+                            keyboardType="email-address"
+                            label='E-mail'
+                            value={this.state.email}
+                            onChangeText={text => this.handleChange('email', text)}
                         />
                         <TextField
-                            keyboardType="numeric"
-                            maxLength={11}
-                            label='CPF'
+                            secureTextEntry
+                            label='Senha'
                             value={this.state.cpf}
-                            onChangeText={text => this.handleChange('cpf', text)}
+                            onChangeText={text => this.handleChange('senha', text)}
                         />
                         <TextField
-                            label='Data de nascimento'
-                            value={this.state.dataNascimento}
-                            onChangeText={text => this.handleChange('dataNascimento', text)}
+                            secureTextEntry
+                            label='Confirmar Senha'
+                            value={this.state.confirmaSenha}
+                            onChangeText={text => this.handleChange('confirmaSenha', text)}
                         />
-                        
-                        <TextField
-                            keyboardType="numeric"
-                            label='Telefone'
-                            value={this.state.telefone}
-                            onChangeText={text => this.handleChange('telefone', text)}
-                        />
+
+                      
                         <View style={{ flex: 1, justifyContent: 'flex-end', alignItems: 'center', marginTop: 15 }}>
-                            <Button onPress={() => this.props.navigation.navigate('AcessoScreen')}>Próximo</Button>
+                            <Button>Criar Conta</Button>
                         </View>
                     </View>
                 </ScrollView>
