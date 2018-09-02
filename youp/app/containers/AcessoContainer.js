@@ -65,7 +65,9 @@ export default class AcessoContainer extends React.Component {
 
                       
                         <View style={{ flex: 1, justifyContent: 'flex-end', alignItems: 'center', marginTop: 15 }}>
-                            <Button onPress={() => this.setState({modalConquista: true})}>Criar Conta</Button>
+                            <Button onPress={() => {
+                                this.setState({modalConquista: true})
+                            }}>Criar Conta</Button>
                         </View>
                     </View>
                 </ScrollView>

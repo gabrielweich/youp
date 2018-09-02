@@ -48,9 +48,9 @@ export default class HomeContainer extends React.Component {
             }
         ],
         categorias: [
-            { id_categoria: '1', name: 'Animais', icon: 'ios-paw', color: '#7784E4' },
-            { id_categoria: '2', name: 'Saúde', icon: 'ios-medical', color: '#F5879B' },
-            { id_categoria: '3', name: 'Educação', icon: 'ios-book', color: '#53DCD2' },
+            { id_categoria: '1', name: 'Animais', icon: 'ios-paw', image: require('../images/mask.png'), color: '#7784E4' },
+            { id_categoria: '2', name: 'Saúde', icon: 'ios-medical', image: require('../images/openMagazine.png'), color: '#F5879B' },
+            { id_categoria: '3', name: 'Educação', icon: 'ios-book', image: require('../images/recycleSign.png'), color: '#53DCD2' },
         ],
         selected: '2'
     }
@@ -76,15 +76,17 @@ export default class HomeContainer extends React.Component {
                         backgroundColor: "#CED0CE",
                     }}
                 />
-                <FlatList
-                    extraData={this.state}
-                    data={this.state.categorias}
-                    renderItem={({ item }) => <CategoriaItem {...item} selected={this.state.selected == item.id_categoria} select={this.selectCategoriaHandler} />}
-                    keyExtractor={(item, index) => index}
-                    horizontal
-                    showsHorizontalScrollIndicator={false}
-                />
-                <View style={{ marginVertical: 5 }} />
+                <View style={{ alignItems: 'center', alignContent: 'center' }}>
+                    <FlatList
+                        extraData={this.state}
+                        data={this.state.categorias}
+                        renderItem={({ item }) => <CategoriaItem {...item} selected={this.state.selected == item.id_categoria} select={this.selectCategoriaHandler} />}
+                        keyExtractor={(item, index) => index}
+                        horizontal
+                        showsHorizontalScrollIndicator={false}
+                    />
+                </View>
+               
                 <FlatList
                     data={this.state.projetos}
                     renderItem={({ item }) => <ProjetoItem {...item} detalhe={() => this.props.navigation.navigate('DetalheScreen', { projeto: item })} />}
