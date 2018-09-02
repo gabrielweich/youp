@@ -10,7 +10,7 @@ const Button = (props) => (
         backgroundColor: '#68CFF1',
         padding: 10
     }} {...props}>
-        <Text style={{ color: '#fff', fontSize: 18 }}>
+        <Text style={{ color: '#fff', fontSize: 18, fontFamily: 'Lato-Regular' }}>
             {props.children}
         </Text>
     </TouchableOpacity>

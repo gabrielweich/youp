@@ -6,7 +6,7 @@ import {Text} from 'react-native'
 export default class DetalheScreen extends React.PureComponent {
     static navigationOptions = ({navigation}) => {
         return {
-            headerTitle: <Text style={{color: 'white', fontSize: 18}}>Voltar</Text>,
+            headerTitle: <Text style={{color: 'white', fontSize: 18, fontFamily: 'Lato-Regular'}}>Voltar</Text>,
             headerTransparent: true,
             headerStyle: { borderBottomWidth: 0, marginTop: 15},
             headerTintColor: '#ffffff'

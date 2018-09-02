@@ -28,7 +28,7 @@ export default class CadastroContainer extends React.Component {
                 />
                 <ScrollView>
                     <View style={{ marginTop: 24, padding: 20 }}>
-                        <Text style={{ fontSize: 36, color: '#7504AE', fontWeight: 'bold' }}>Criar conta :)</Text>
+                        <Text style={{ fontSize: 36, color: '#7504AE', fontFamily: 'Baloo-Regular' }}>Criar conta :)</Text>
                         <TouchableOpacity style={{
                             marginTop: 25,
                             borderWidth: 2,
@@ -42,7 +42,7 @@ export default class CadastroContainer extends React.Component {
                         }}>
                             <Ionicons name='ios-camera' size={50} color='rgba(0,0,0,0.15)' />
                         </TouchableOpacity>
-                        <Text style={{ fontSize: 18, fontWeight: 'bold', marginTop: 15 }}>Dados Pessoais</Text>
+                        <Text style={{ fontSize: 18, fontFamily:'Lato-Bold', marginTop: 15 }}>Dados Pessoais</Text>
                         <TextField
                             label='Nome'
                             value={this.state.nome}

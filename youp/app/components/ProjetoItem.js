@@ -42,7 +42,7 @@ const ProjetoItem = ({ uri, name, description, date, detalhe }) => {
 						}}
 					>
 						<View style={{ flex: 1, alignSelf: 'flex-start', justifyContent: 'flex-end'}}>
-							<Text style={{ color: '#fff', fontSize: 20, fontWeight: 'bold', marginBottom: 40 }}>{name}</Text>
+							<Text style={{ color: '#fff', fontSize: 22, fontFamily: 'Baloo-Regular', marginBottom: 40 }}>{name}</Text>
 
 						</View>
 					</LinearGradient>

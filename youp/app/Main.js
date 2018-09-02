@@ -3,11 +3,11 @@ import {createStackNavigator, createBottomTabNavigator} from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {colors} from "./resources/Colors";
 import HomeScreen from "./screens/HomeScreen";
-import RankingScreen from "./screens/RankingScreen"
 import ProfileScreen from './screens/ProfileScreen'
 import DetalheScreen from './screens/DetalheScreen';
 import CadastroScreen from './screens/CadastroScreen';
 import AcessoScreen from './screens/AcessoScreen';
+import AdicionaScreen from './screens/AdicionaScreen';
 
 const NavigationStack = isLogged => createStackNavigator({
     HomeScreen: {
@@ -34,7 +34,7 @@ const NavigationStack = isLogged => createStackNavigator({
 
 const TabNavigation = createBottomTabNavigator({
     Home: HomeScreen,
-    // Ranking: RankingScreen,
+    Adiciona: AdicionaScreen,
     Perfil: ProfileScreen
 },
 {
@@ -44,7 +44,7 @@ const TabNavigation = createBottomTabNavigator({
             let iconName;
             switch(routeName){
                 case 'Home': iconName = 'ios-home'; break;
-                // case 'Ranking': iconName = 'ios-trophy'; break;
+                case 'Adiciona': iconName = 'md-add'; break;
                 case 'Perfil': iconName = 'ios-person'; break;
                 default: iconName = 'ios-home';
             }
@@ -53,6 +53,7 @@ const TabNavigation = createBottomTabNavigator({
         },
     }),
     tabBarOptions: {
+        showLabel: false,
         activeTintColor: colors.youp,
         inactiveTintColor: colors.grey,
         style: {
