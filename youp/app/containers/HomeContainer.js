@@ -10,11 +10,13 @@ export default class HomeContainer extends React.Component {
                 id_projeto: '1',
                 uri: 'https://i.imgur.com/lUAsGMU.jpg',
                 name: 'Mãos à Dobra',
+                category: 'Animais',
                 description: 'Ajude a transformar a escola Rui Barbosa com uma reforma no campinho',
                 date: '14/09/2018'
             },
             {
                 id_projeto: '2',
+                category: 'Saúde',
                 uri: 'https://i.imgur.com/lUAsGMU.jpg',
                 name: 'Mãos à Dobra 2',
                 description: 'Ajude a transformar a escola Rui Barbosa com uma reforma no campinho',
