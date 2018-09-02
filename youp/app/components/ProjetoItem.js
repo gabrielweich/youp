@@ -31,7 +31,7 @@ const ProjetoItem = ({ uri, name, description, date, detalhe }) => {
 					<LinearGradient
 						colors={['rgba(0, 0, 0,0.3)', 'rgba(0, 0, 0,0.3)']}
 						style={{
-							borderRadius: 40,
+							borderRadius: 20,
 							flex: 1,
 							paddingTop: 50,
 							paddingHorizontal: 20,
