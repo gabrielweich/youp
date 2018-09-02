@@ -45,7 +45,7 @@ export default class HomeContainer extends React.Component {
             { id_categoria: '2', name: 'Artes', image: require('../images/mask.png'), color: '#7784E4' },
             { id_categoria: '3', name: 'Educação', image: require('../images/openMagazine.png'), color: '#F5879B' },
         ],
-        selected: '2'
+        selected: '1'
     }
 
 
@@ -57,7 +57,7 @@ export default class HomeContainer extends React.Component {
             { id_categoria: '2', name: 'Artes', image: require('../images/mask.png'), color: '#7784E4' },
             { id_categoria: '3', name: 'Educação', image: require('../images/openMagazine.png'), color: '#F5879B' },
         ],
-        selected: '2'
+        selected: '1'
     }
 
     componentDidMount(){
