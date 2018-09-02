@@ -4,6 +4,8 @@ import CategoriaItem from '../components/CategoriaItem'
 import { AppRegistry, Text, StyleSheet, Image } from 'react-native';
 import { View, TextInput, Button, ScrollView } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import FastImage from 'react-native-fast-image'
+
 
 export default class TextInANest extends React.Component {
   constructor(props) {
@@ -12,8 +14,12 @@ export default class TextInANest extends React.Component {
 
   render() {
     return (
-      <ScrollView style={{ backgroundColor: '#fff', flex: 1 }}>          
-        <Image source={require('../images/Perfil_branco.gif')} />
+      <ScrollView style={{ backgroundColor: '#fff', flex: 1 }}>
+      <FastImage
+          style={{flex: 1, height: '100%', width: '100%', position: 'absolute', alignSelf: 'center' }}
+          source={require('../images/estrelinhas.gif')}
+          resizeMode={FastImage.resizeMode.cover}
+        />       
         <Image style={{ alignSelf: 'flex-end', marginTop: 15, marginRight: 15 }} resizeMode="contain" source={require('../images/config.png')} />
         <Image style={{ alignSelf: 'center', marginTop: 15 }} resizeMode="contain" source={require('../images/show-profile-04.png')} />
         <Text style={styles.profileName} onPress={this.onPressTitle}>
