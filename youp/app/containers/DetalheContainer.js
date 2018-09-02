@@ -29,11 +29,11 @@ export default class DetalheContainer extends React.Component {
                             width: 250,
                             marginBottom: 10,
                             alignItems: 'center',
-                            borderRadius: 10,
+                            borderRadius: 12,
                             backgroundColor: '#68CFF1',
                             padding: 10
                         }}>
-                            <Text style={{ color: '#fff' }}>
+                            <Text style={{ color: '#fff', fontSize: 16 }}>
                                 Quero Participar!
 
                             </Text>
