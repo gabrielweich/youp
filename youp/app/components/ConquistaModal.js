@@ -16,7 +16,7 @@ const ConquistaModal = (props) => (
                 SUA PRIMEIRA HONRARIA.
             </Text>
             <Image source={require('../images/Mascote.png')} style={{width: 250, height: 250, marginTop: 20, justifyContent: 'center', alignSelf: 'center'}} />
-            <TouchableOpacity onPress={props.closeModal} style={{ backgroundColor: '#7504AE', position: 'absolute', bottom: 0, right: 0, paddingHorizontal: 25, borderTopLeftRadius: 25, alignItems: 'center', justifyContent: 'center' }}>
+            <TouchableOpacity onPress={props.closeModal} style={{ backgroundColor: '#7504AE', position: 'absolute', bottom: 0, right: 0, paddingHorizontal: 25, borderTopLeftRadius: 25, borderBottomRightRadius: 25, alignItems: 'center', justifyContent: 'center' }}>
                 <Ionicons name='ios-close' size={70} color='#fff' />
             </TouchableOpacity>
 
