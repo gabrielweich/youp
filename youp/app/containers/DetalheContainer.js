@@ -40,7 +40,7 @@ export default class DetalheContainer extends React.Component {
                     </LinearGradient>
                 </ImageBackground>
                 <View style={{ padding: 20, flex: 1 }}>
-                    <Text style={{ fontFamily: 'Lato-Bold' }}>{category.toUpperCase()}</Text>
+                    <Text style={{ fontFamily: 'Lato-Bold', fontWeight: 'bold' }}>{category.toUpperCase()}</Text>
                     <Text style={{ fontSize: 30, color: "#7504AE", fontFamily: 'Baloo-Regular' }}>{name}</Text>
 
                     <View style={{ marginTop: 30 }}>

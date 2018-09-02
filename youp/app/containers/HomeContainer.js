@@ -8,10 +8,11 @@ export default class HomeContainer extends React.Component {
         projetos: [
             {
                 id_projeto: '1',
-                category: 'Saúde',
-                uri: 'https://www12.senado.leg.br/noticias/materias/2017/12/27/projeto-concede-pensao-vitalicia-a-vitimas-de-microcefalia-causada-pelo-virus-zika/aedes_20151211_01269.jpg/@@images/image/imagem_materia',
-                name: 'Diga Não a Dengue',
-                description: 'Colabore combatendo o vírus da dengue. Com o seu apoio reduziremos os pontos críticos e de proliferação do mosquito aedes aegypti.',
+                category: 'Sustentabilidade',
+                uri: 'https://i.imgur.com/iquvGGg.png',
+                name: 'Grifes Para o Bem',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo enim diam, sed varius nisl bibendum at. Vestibulum faucibus magna in eros sagittis dapibus. Duis tincidunt arcu id dolor convallis dictum. Sed eu turpis nisi. Pellentesque sollicitudin purus eget turpis facilisis vehicula. Cras eu urna sit amet ex fringilla placerat eu non nibh. Cras mattis elit eu purus consectetur lobortis.'
+                    + 'Nam bibendum tempor consectetur. Ut semper ac ligula eget finibus. Pellentesque eget velit vulputate, consectetur elit nec, placerat purus. Maecenas sed orci et augue maximus hendrerit. Duis molestie gravida tempor. Donec neque urna, varius vel tempus efficitur, dapibus id dui. Donec egestas venenatis felis et blandit.',
                 date: '27/08/2018'
             },
             {
