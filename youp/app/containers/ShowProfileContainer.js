@@ -12,27 +12,39 @@ export default class TextInANest extends React.Component {
 
   render() {
     return (
-      <ScrollView>        
-        <Text style={styles.secondText} onPress={this.onPressTitle}>
-          TESTE TESTE 2
+      <ScrollView style={{ backgroundColor: '#fff', flex: 1 }}>          
+        <Image style={{ alignSelf: 'center', marginTop: 15 }} resizeMode="contain" source={require('../images/show-profile-04.png')} />
+        <Text style={styles.profileName} onPress={this.onPressTitle}>
+          Letícia
         </Text>
-        <Image style={{ alignSelf: 'center', justifyContent: 'center' }} resizeMode="contain" source={require('../images/show-profile-01.png')} />
+        <Text style={styles.profileCity} onPress={this.onPressTitle}>
+          PORTO ALEGRE / RS
+        </Text>
+        <Image style={{ alignSelf: 'center', width: '90%', marginTop: 10, marginBottom: 10 }} resizeMode="contain" source={require('../images/show-profile-01.png')} />
+        <Image style={{ alignSelf: 'center', width: '90%', marginBottom: 10 }} resizeMode="contain" source={require('../images/show-profile-02.png')} />
+        <Image style={{ alignSelf: 'center', width: '90%', marginBottom: 10 }} resizeMode="contain" source={require('../images/show-profile-03.png')} />
       </ScrollView>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  titleText: {
-    fontSize: 40,
+  profileName: {
+    marginTop: 10,
     fontWeight: 'bold',
-    fontFamily: 'Courier',
-    color:'#7404AC'
+    fontSize: 28,
+    fontFamily: 'Arial',
+    color:'#ACACAC',
+    alignSelf: 'center'
   },
-  secondText: {
-    fontSize: 25,
-    fontWeight: 'normal',
-    fontFamily: 'Courier',
+  profileCity: {
+    marginTop: 5,
+    marginBottom: 10,
+    fontWeight: 'bold',
+    fontSize: 18,
+    fontFamily: 'Arial',
+    color:'#ACACAC',
+    alignSelf: 'center'
   },
   bodyText: {
     fontSize: 20,
