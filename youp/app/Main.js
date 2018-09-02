@@ -6,6 +6,7 @@ import HomeScreen from "./screens/HomeScreen";
 import RankingScreen from "./screens/RankingScreen"
 import ProfileScreen from './screens/ProfileScreen'
 import DetalheScreen from './screens/DetalheScreen';
+import CadastroScreen from './screens/CadastroScreen';
 
 const NavigationStack = isLogged => createStackNavigator({
     HomeScreen: {
@@ -13,6 +14,9 @@ const NavigationStack = isLogged => createStackNavigator({
     },
     DetalheScreen: {
         screen: DetalheScreen
+    },
+    CadastroScreen: {
+        screen: CadastroScreen
     },
     TabNavigation: {
         screen: TabNavigation

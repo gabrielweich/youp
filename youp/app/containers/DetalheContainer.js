@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, ImageBackground, TouchableOpacity, StatusBar } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient';
-
+import Button from '../components/Button'
 
 export default class DetalheContainer extends React.Component {
 
@@ -47,19 +47,7 @@ export default class DetalheContainer extends React.Component {
                         <Text>{description}</Text>
                     </View>
                     <View style={{ flex: 1, justifyContent: 'flex-end', alignItems: 'center' }}>
-                        <TouchableOpacity style={{
-                            width: 250,
-                            marginBottom: 10,
-                            alignItems: 'center',
-                            borderRadius: 12,
-                            backgroundColor: '#68CFF1',
-                            padding: 10
-                        }}>
-                            <Text style={{ color: '#fff', fontSize: 16 }}>
-                                Quero Participar!
-
-                            </Text>
-                        </TouchableOpacity>
+                        <Button onPress={() => this.props.navigation.navigate('CadastroScreen')}>Quero participar!</Button>
                     </View>
                 </View>
 

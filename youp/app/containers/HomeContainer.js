@@ -8,7 +8,7 @@ export default class HomeContainer extends React.Component {
         projetos: [
             {
                 id_projeto: '1',
-                uri: 'https://static1.squarespace.com/static/56b0d6d4e707eb68892b71c1/t/5776e8783e00be9cc0d49bef/1467410557548/?format=1500w',
+                uri: 'http://www.thejunctionworks.org/site/DefaultSite/filesystem/images/Franklin-Templeton-Volunteers.jpg',
                 name: 'Mãos à Dobra',
                 category: 'Animais',
                 description: 'Ajude a transformar a escola Rui Barbosa com uma reforma no campinho',
@@ -17,7 +17,7 @@ export default class HomeContainer extends React.Component {
             {
                 id_projeto: '2',
                 category: 'Saúde',
-                uri: 'https://i.imgur.com/lUAsGMU.jpg',
+                uri: 'https://artsedge.kennedy-center.org/~/media/ArtsEdge/Images/Articles/Families/article-specific/parent-volunteer169.jpg?as=1&dmc=0&w=610',
                 name: 'Mãos à Dobra 2',
                 description: 'Ajude a transformar a escola Rui Barbosa com uma reforma no campinho',
                 date: '14/09/2018'
