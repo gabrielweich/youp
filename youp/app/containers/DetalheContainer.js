@@ -19,7 +19,7 @@ export default class DetalheContainer extends React.Component {
                 />
                 <View style={{ padding: 20, flex: 1 }}>
                     <Text style={{ fontWeight: 'bold' }}>{category.toUpperCase()}</Text>
-                    <Text style={{ fontSize: 30 }}>{name}</Text>
+                    <Text style={{ fontSize: 30, color: "#7504AE" }}>{name}</Text>
 
                     <View style={{ marginTop: 30 }}>
                         <Text>{description}</Text>
