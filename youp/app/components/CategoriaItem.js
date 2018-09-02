@@ -26,9 +26,9 @@ export default class CategoriaItem extends React.Component {
                             borderRadius: 2,
                             marginTop: 2,
                             alignSelf: 'center',
-                            height: 4,
+                            height: 2,
                             opacity: 0.9,
-                            width: "80%",
+                            width: "90%",
                             backgroundColor: this.props.color,
                         }}
                     />

@@ -24,10 +24,9 @@ export default class HomeContainer extends React.Component {
             }
         ],
         categorias: [
-            { id_categoria: '1', name: 'Animais', icon: 'ios-paw', color: 'blue' },
-            { id_categoria: '2', name: 'Saúde', icon: 'ios-medical', color: 'blue' },
-            { id_categoria: '3', name: 'Educação', icon: 'ios-book', color: 'blue' },
-            { id_categoria: '4', name: 'Saúde', icon: 'ios-medical', color: 'blue' }
+            { id_categoria: '1', name: 'Animais', icon: 'ios-paw', color: '#7784E4' },
+            { id_categoria: '2', name: 'Saúde', icon: 'ios-medical', color: '#F5879B' },
+            { id_categoria: '3', name: 'Educação', icon: 'ios-book', color: '#53DCD2' },
         ],
         selected: '2'
     }
