@@ -7,14 +7,14 @@ export default class HomeContainer extends React.Component {
     state = {
         projetos: [
             {
-                id: '1',
+                id_projeto: '1',
                 uri: 'http://shhkids.org/wp-content/uploads/2013/03/Tiffany2.jpg',
                 name: 'Mãos à Dobra',
                 description: 'Ajude a transformar a escola Rui Barbosa com uma reforma no campinho',
                 date: '14/09/2018'
             },
             {
-                id: '2',
+                id_projeto: '2',
                 uri: 'http://shhkids.org/wp-content/uploads/2013/03/Tiffany2.jpg',
                 name: 'Mãos à Dobra 2',
                 description: 'Ajude a transformar a escola Rui Barbosa com uma reforma no campinho',
@@ -22,15 +22,17 @@ export default class HomeContainer extends React.Component {
             }
         ],
         categorias: [
-            { id: '1', name: 'Animais', icon: 'ios-paw' },
-            { id: '2', name: 'Saúde', icon: 'ios-medical' },
-            { id: '3', name: 'Educação', icon: 'ios-medical' },
-            { id: '4', name: 'saúde', icon: 'ios-medical' },
-            { id: '5', name: 'saúde', icon: 'ios-medical' },
-            { id: '6', name: 'saúde', icon: 'ios-medical' },
-            { id: '7', name: 'saúde', icon: 'ios-medical' },
+            { id_categoria: '1', name: 'Animais', icon: 'ios-paw', color: 'blue', categoria: "animal" },
+            { id_categoria: '2', name: 'Saúde', icon: 'ios-medical', color: 'blue', categoria: "saude" },
+            { id_categoria: '3', name: 'Educação', icon: 'ios-medical', color: 'blue',  categoria: "educacao" },
+            { id_categoria: '4', name: 'saúde', icon: 'ios-medical', color: 'blue',  categoria: "teste"}
+        ],
+        selected: 'teste'
+    }
 
-        ]
+    selectCategoriaHandler = (idCategoria) => {
+        console.warn(idCategoria)
+        this.setState({selected: idCategoria})
     }
     //7504AE
     render() {
@@ -46,9 +48,10 @@ export default class HomeContainer extends React.Component {
                     }}
                 />
                 <FlatList
+                extraData={this.props}
                     data={this.state.categorias}
-                    renderItem={({ item }) => <CategoriaItem {...item} />}
-                    keyExtractor={item => item.id}
+                    renderItem={({ item }) => <CategoriaItem {...item} selected={this.state.selected == item.categoria} select={this.selectCategoriaHandler}/>}
+                    keyExtractor={(item, index) => index}
                     horizontal
                     showsHorizontalScrollIndicator={false}
                 />
