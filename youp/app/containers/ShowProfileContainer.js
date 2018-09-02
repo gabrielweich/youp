@@ -13,6 +13,7 @@ export default class TextInANest extends React.Component {
   render() {
     return (
       <ScrollView style={{ backgroundColor: '#fff', flex: 1 }}>          
+        <Image source={require('../images/Perfil_branco.gif')} />
         <Image style={{ alignSelf: 'flex-end', marginTop: 15, marginRight: 15 }} resizeMode="contain" source={require('../images/config.png')} />
         <Image style={{ alignSelf: 'center', marginTop: 15 }} resizeMode="contain" source={require('../images/show-profile-04.png')} />
         <Text style={styles.profileName} onPress={this.onPressTitle}>

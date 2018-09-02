@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View, TouchableOpacity } from 'react-native'
+import { Text, View, TouchableOpacity, Image } from 'react-native'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
@@ -15,7 +15,7 @@ export default class CategoriaItem extends React.Component {
                     width: 82,
                     height: 60, borderRadius: 10, margin: 5, padding: 5
                 }} onPress={() => this.props.select(this.props.id_categoria)}>
-                    <Ionicons name={this.props.icon} size={50} color='#fff' />
+                    <Image source={this.props.image} resizeMode="center"/>
                 </TouchableOpacity>
                 {this.props.selected
                     ?
@@ -25,7 +25,7 @@ export default class CategoriaItem extends React.Component {
                             borderRadius: 2,
                             marginTop: 2,
                             alignSelf: 'center',
-                            height: 20,
+                            height: 2,
                             opacity: 0.9,
                             width: "90%",
                             backgroundColor: this.props.color,
