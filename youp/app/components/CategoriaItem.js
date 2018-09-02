@@ -12,7 +12,7 @@ const CategoriaItem = (props) => {
                 backgroundColor: props.color,
                 alignItems: 'center',
                 justifyContent: 'center',
-                width: 80,
+                width: 82,
                 height: 60, borderRadius: 10, margin: 5, padding: 5
             }} onPress={() => props.select(props.categoria)}>
                 <Ionicons name={props.icon} size={50} color='#fff' />
@@ -21,6 +21,7 @@ const CategoriaItem = (props) => {
                 ?
                 <View
                     style={{
+                        marginBottom: 5,
                         borderRadius: 2,
                         marginTop: 2,
                         alignSelf: 'center',

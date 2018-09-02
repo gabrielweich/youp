@@ -38,7 +38,7 @@ export default class HomeContainer extends React.Component {
     render() {
         return (
             <View style={{ backgroundColor: '#fff', flex: 1 }}>
-                <Image style={{ alignSelf: 'center', width: 100, height: 80 }} resizeMode="contain" source={require('../images/YoUP.gif')} />
+                <Image style={{ alignSelf: 'center', width: 100, height: 60, justifyContent: 'center' }} resizeMode="contain" source={require('../images/YoUP.gif')} />
                 <View
                     style={{
                         height: 2,
@@ -55,7 +55,7 @@ export default class HomeContainer extends React.Component {
                     horizontal
                     showsHorizontalScrollIndicator={false}
                 />
-
+                <View style={{marginTop: 5}}/>
                 <FlatList
                     data={this.state.projetos}
                     style={{
