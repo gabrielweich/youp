@@ -8,7 +8,7 @@ export default class DetalheScreen extends React.PureComponent {
         return {
             headerTitle: <Text style={{color: 'white', fontSize: 18}}>Voltar</Text>,
             headerTransparent: true,
-            headerStyle: { borderBottomWidth: 0,},
+            headerStyle: { borderBottomWidth: 0, marginTop: 15},
             headerTintColor: '#ffffff'
         }
     }
