@@ -10,9 +10,8 @@ export default class DetalheContainer extends React.Component {
         return (
             <View>
                 <ImageBackground
-                    style={{ width: 150, height: 150 }}
-                    source={{ uri: 'https://i.imgur.com/lUAsGMU.jpg' }}
-
+                    style={{ width: '100%', height: 200 }}
+                    source={{ uri: 'http://i.imgur.com/lUAsGMU.jpg' }}
 
                 />
                 <Text>{name}</Text>
