@@ -6,7 +6,6 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 export default class CategoriaItem extends React.Component {
     //console.warn(id)
     render() {
-        console.warn(this.props.selected)
 
         return (
             <View style={{ margin: 10 }}>
@@ -16,7 +15,7 @@ export default class CategoriaItem extends React.Component {
                     justifyContent: 'center',
                     width: 82,
                     height: 60, borderRadius: 10, margin: 5, padding: 5
-                }} onPress={() => this.props.select(this.props.categoria)}>
+                }} onPress={() => this.props.select(this.props.id_categoria)}>
                     <Ionicons name={this.props.icon} size={50} color='#fff' />
                 </TouchableOpacity>
                 {this.props.selected

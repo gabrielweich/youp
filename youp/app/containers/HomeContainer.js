@@ -22,12 +22,12 @@ export default class HomeContainer extends React.Component {
             }
         ],
         categorias: [
-            { id_categoria: '1', name: 'Animais', icon: 'ios-paw', color: 'blue', categoria: "animal" },
-            { id_categoria: '2', name: 'Saúde', icon: 'ios-medical', color: 'blue', categoria: "saude" },
-            { id_categoria: '3', name: 'Educação', icon: 'ios-medical', color: 'blue',  categoria: "educacao" },
-            { id_categoria: '4', name: 'saúde', icon: 'ios-medical', color: 'blue',  categoria: "teste"}
+            { id_categoria: '1', name: 'Animais', icon: 'ios-paw', color: 'blue' },
+            { id_categoria: '2', name: 'Saúde', icon: 'ios-medical', color: 'blue'},
+            { id_categoria: '3', name: 'Educação', icon: 'ios-book', color: 'blue'},
+            { id_categoria: '4', name: 'Saúde', icon: 'ios-medical', color: 'blue'}
         ],
-        selected: 'educacao'
+        selected: '2'
     }
 
     selectCategoriaHandler = (idCategoria) => {
@@ -50,7 +50,7 @@ export default class HomeContainer extends React.Component {
                 <FlatList
                     extraData={this.state}
                     data={this.state.categorias}
-                    renderItem={({ item }) => <CategoriaItem {...item} selected={this.state.selected === item.categoria} select={this.selectCategoriaHandler}/>}
+                    renderItem={({ item }) => <CategoriaItem {...item} selected={this.state.selected == item.id_categoria} select={this.selectCategoriaHandler}/>}
                     keyExtractor={(item, index) => index}
                     horizontal
                     showsHorizontalScrollIndicator={false}
