@@ -4,7 +4,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import {colors} from "./resources/Colors";
 import HomeScreen from "./screens/HomeScreen";
 import RankingScreen from "./screens/RankingScreen"
-import ProfileScreen from './screens/ProfileScren'
+import ProfileScreen from './screens/ProfileScreen'
 import DetalheScreen from './screens/DetalheScreen';
 
 const NavigationStack = isLogged => createStackNavigator({
@@ -26,7 +26,7 @@ const NavigationStack = isLogged => createStackNavigator({
 
 const TabNavigation = createBottomTabNavigator({
     Home: HomeScreen,
-    Ranking: RankingScreen,
+    // Ranking: RankingScreen,
     Perfil: ProfileScreen
 },
 {
@@ -36,7 +36,7 @@ const TabNavigation = createBottomTabNavigator({
             let iconName;
             switch(routeName){
                 case 'Home': iconName = 'ios-home'; break;
-                case 'Ranking': iconName = 'ios-trophy'; break;
+                // case 'Ranking': iconName = 'ios-trophy'; break;
                 case 'Perfil': iconName = 'ios-person'; break;
                 default: iconName = 'ios-home';
             }

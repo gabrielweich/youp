@@ -4,8 +4,6 @@ import CategoriaItem from '../components/CategoriaItem'
 import { AppRegistry, Text, StyleSheet, Image } from 'react-native';
 import { View, TextInput, Button, ScrollView } from 'react-native';
 
-
-
 export default class TextInANest extends React.Component {
   constructor(props) {
     super(props);
