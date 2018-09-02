@@ -4,7 +4,8 @@ import HomeContainer from "../containers/HomeContainer";
 export default class HomeScreen extends React.PureComponent {
     static navigationOptions = () => {
         return {
-            headerMode: 'none'
+            headerMode: 'none',
+            header: null
         }
     };
 
