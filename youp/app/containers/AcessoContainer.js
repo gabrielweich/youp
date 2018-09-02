@@ -24,7 +24,7 @@ export default class AcessoContainer extends React.Component {
             <View style={{ backgroundColor: '#fff', flex: 1 }}>
                 <StatusBar
                     barStyle="dark-content"
-                    backgroundColor='#fff'
+                    backgroundColor= {this.state.modalConquista ? 'black' : '#fff'}
                 />
                 <ConquistaModal closeModal={() => this.setState({modalConquista: false})} isVisible={this.state.modalConquista}/>
                 <ScrollView>
