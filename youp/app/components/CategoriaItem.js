@@ -4,7 +4,6 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
 export default class CategoriaItem extends React.Component {
-    //console.warn(id)
     render() {
 
         return (
@@ -26,7 +25,7 @@ export default class CategoriaItem extends React.Component {
                             borderRadius: 2,
                             marginTop: 2,
                             alignSelf: 'center',
-                            height: 2,
+                            height: 20,
                             opacity: 0.9,
                             width: "90%",
                             backgroundColor: this.props.color,

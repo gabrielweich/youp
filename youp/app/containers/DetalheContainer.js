@@ -40,11 +40,11 @@ export default class DetalheContainer extends React.Component {
                     </LinearGradient>
                 </ImageBackground>
                 <View style={{ padding: 20, flex: 1 }}>
-                    <Text style={{ fontWeight: 'bold' }}>{category.toUpperCase()}</Text>
-                    <Text style={{ fontSize: 30, color: "#7504AE" }}>{name}</Text>
+                    <Text style={{ fontFamily: 'Lato-Bold' }}>{category.toUpperCase()}</Text>
+                    <Text style={{ fontSize: 30, color: "#7504AE", fontFamily: 'Baloo-Regular' }}>{name}</Text>
 
                     <View style={{ marginTop: 30 }}>
-                        <Text>{description}</Text>
+                        <Text style={{fontSize: 20, color: '#000', fontFamily: 'Lato-Light'}}>{description}</Text>
                     </View>
                     <View style={{ flex: 1, justifyContent: 'flex-end', alignItems: 'center' }}>
                         <Button onPress={() => this.props.navigation.navigate('CadastroScreen')}>Quero participar!</Button>

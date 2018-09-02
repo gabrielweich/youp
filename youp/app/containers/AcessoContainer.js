@@ -29,7 +29,7 @@ export default class AcessoContainer extends React.Component {
                 <ConquistaModal closeModal={() => this.setState({modalConquista: false})} isVisible={this.state.modalConquista}/>
                 <ScrollView>
                     <View style={{ marginTop: 24, padding: 20 }}>
-                        <Text style={{ fontSize: 36, color: '#7504AE', fontWeight: 'bold' }}>Quase lá \0/</Text>
+                        <Text style={{ fontSize: 36, color: '#7504AE', fontFamily: 'Baloo-Regular' }}>Quase lá \0/</Text>
                         <TouchableOpacity style={{
                             marginTop: 25,
                             borderWidth: 2,
@@ -43,7 +43,7 @@ export default class AcessoContainer extends React.Component {
                         }}>
                             <Ionicons name='ios-camera' size={50} color='rgba(0,0,0,0.15)' />
                         </TouchableOpacity>
-                        <Text style={{ fontSize: 18, fontWeight: 'bold', marginTop: 25 }}>Dados de acesso</Text>
+                        <Text style={{ fontSize: 18, fontFamily:'Lato-Bold', marginTop: 25 }}>Dados de acesso</Text>
                         <TextField
                             keyboardType="email-address"
                             label='E-mail'

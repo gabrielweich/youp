@@ -8,10 +8,10 @@ const ConquistaModal = (props) => (
     <Modal isVisible={props.isVisible}>
         <View style={{ backgroundColor: 'white', paddingHorizontal: 15, paddingTop: 15, flex: 1, borderRadius: 30, borderWidth: 4, borderColor: '#7504AE' }}>
 
-            <Text style={{ color: '#7504AE', fontSize: 48, textAlign: 'center', marginTop: 20, fontWeight: 'bold' }}>
+            <Text style={{ color: '#7504AE', fontSize: 48, textAlign: 'center', marginTop: 20, fontFamily: 'Baloo-Regular' }}>
                 Parabéns!
             </Text>
-            <Text style={{ color: '#7504AE', fontSize: 18, textAlign: 'center', marginTop: 25 }}>
+            <Text style={{ color: '#7504AE', fontSize: 18, textAlign: 'center', marginTop: 25, fontFamily: 'Lato-Light' }}>
                 VOCÊ ACABOU DE CONQUISTAR
                 SUA PRIMEIRA HONRARIA.
             </Text>
